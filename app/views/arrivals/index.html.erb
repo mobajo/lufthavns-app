@@ -1,0 +1,55 @@
+<%= content_for(:title, "Lufthavns Scraper") %>
+
+<div class="container">
+  
+  <h1 class="text-center">Københavns Lufthavn</h1>
+  <h3 class="text-center" style="margin-bottom: 40px;">Ankomster <%= Date.today %></h3>
+
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+      <%= link_to "Afgange", departures_index_path, class: "btn btn-cph", style: "width: 100%;" %>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <%= link_to "Ankomster", arrivals_index_path, class: "btn btn-cph", style: "width: 100%; color: yellow;" %>
+    </div>
+  </div>
+
+  <div class="table-responsive fade-in" id="arrivals">
+
+    <input class="search form-control input-lg" placeholder="Søg i dagens ankomster..." autofocus/>
+
+    <table class="table table-responsive">
+      <thead>
+        <tr>
+          <th>Tid</th>
+          <th>Fra</th>
+          <th>Selskab</th>
+          <th>Fly</th>   
+        </tr>
+      </thead>
+      <tbody class="list">
+        <% @arrivals.each do |flight| %>
+          <tr>
+            <td class="time"><%= flight["time"] %></td>
+            <td class="city"><%= flight["city"].upcase %></td>
+            <td class="airline"><%= flight["airline"].upcase %></td>
+            <td class="plane"><%= flight["plane"] %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  
+</div>
+
+<%= content_for(:after_js) do %>
+
+  <script type="text/javascript">
+    var options = {
+      valueNames: [ 'time', 'city', 'airline', 'plane', 'terminal', 'gate' ]
+    };
+
+    var departuresList = new List('arrivals', options);
+  </script>
+
+<% end %>

@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Københavns Lufthavn</h1>
+  <h2>Afgange:</h2>
+  <% @departuresArray.each_with_index do |flight, index| %>
+    <% index = 0 %>
+    <p><%= flight.time[index] %></p>
+    <p><%= flight.destination %></p>
+    <p><%= flight.destination[index] %> <%= flight.destination[index + 1] %> <%= flight.destination[index + 2] %> <%= flight.destination[index + 3] %></p>
+    <p><%= flight.terminal[index] %></p>
+    <p><%= flight.gate[index] %></p>
+    <% index += 1 %>
+  <% end %>
+  
+</div>

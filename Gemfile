@@ -4,10 +4,11 @@ ruby '2.4.3'
 gem 'devise'
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'
-gem 'pg'
+gem 'pg', '~> 0.18'
 gem 'puma'
 gem 'rails', '5.1.4'
 gem 'redis'
+gem 'react-rails'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
@@ -16,9 +17,15 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+gem 'whenever', require: false
+gem 'active_model_serializers'
+gem "pundit"
+gem 'rack-cors', :require => 'rack/cors'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :development, :test do

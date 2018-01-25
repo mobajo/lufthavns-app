@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time: MyString
+  city: MyString
+  airport: MyString
+  airline: MyString
+  plane: MyString
+  terminal: MyString
+  gate: MyString
+
+two:
+  time: MyString
+  city: MyString
+  airport: MyString
+  airline: MyString
+  plane: MyString
+  terminal: MyString
+  gate: MyString

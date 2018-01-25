@@ -1,1 +1,72 @@
 // Specific CSS for your home-page
+
+body {
+  background: $gray_base;
+  color: white;
+  font-family: "Open Sans", "Helvetica";
+  font-weight: lighter;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $brand-info;
+  font-weight: lighter;
+}
+
+p {
+  color: #FFFFFF;
+}
+
+.search {
+  margin: 20px 0px 20px 0px;
+  background: #404040;
+  color: white;
+}
+
+.search:active {
+  background-color: none;
+}
+
+td {
+  background: url('http://res.cloudinary.com/mobajo/image/upload/v1516824399/crossed_stripes_h6vcop.png');
+  color: $brand-info;
+  font-family: 'VT323';
+  font-size: 22px;
+}
+
+.btn-cph {
+  background: #404049;
+  color: white;
+  padding: 13px 0px 13px 0px;
+  border: .5px solid white;
+  font-size: 22px;
+  margin: 15px 0px 15px 0px;
+  font-weight: lighter;
+}
+
+.btn-cph:hover {
+  opacity: 0.7;
+  color: white;
+}
+
+#arrivals {
+  border: none;
+}
+
+#departures {
+  border: none;
+}
+
+.fade-in {
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+  -webkit-animation-delay: 0.25s;
+  animation-delay: 0.25s;
+}
+
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
