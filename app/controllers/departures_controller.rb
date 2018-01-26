@@ -2,7 +2,7 @@ require 'open-uri'
 
 class DeparturesController < ApplicationController
   def index
-   source = 'http://localhost:3000/api/v1/departures/'
+   source = 'https://infinite-woodland-15476.herokuapp.com/api/v1/arrivals'
    resp = Net::HTTP.get_response(URI.parse(source))
    data = resp.body
    @departures = JSON.parse(data)
