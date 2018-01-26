@@ -7,7 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'nokogiri'
-require 'pry-byebug'
 require 'open-uri'
 
 puts "Getting data"
