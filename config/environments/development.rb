@@ -1,8 +1,7 @@
 Rails.application.configure do
     # Verifies that versions and hashed value of the package contents in the project's package.json
 
-  config.react.variant = :development
-  config.action_mailer.default_url_options = { host: "http://localhost:3000" }
+  config.action_mailer.default_url_options = { host: "https://infinite-woodland-15476.herokuapp.com/" }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on

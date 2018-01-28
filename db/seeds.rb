@@ -1,5 +1,4 @@
 require 'nokogiri'
-require 'pry-byebug'
 require 'open-uri'
 
 puts "Getting data"
@@ -36,9 +35,6 @@ puts
 puts "Fetching arrivals..."
 puts
 
-require 'nokogiri'
-require 'pry-byebug'
-require 'open-uri'
 html_arrivals = open('https://www.cph.dk/flyinformation/ankomster/')
 doc = Nokogiri::HTML(html_arrivals)
 
