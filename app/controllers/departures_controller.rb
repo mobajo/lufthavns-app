@@ -12,3 +12,4 @@ class DeparturesController < ApplicationController
 
   end
 end
+ 
